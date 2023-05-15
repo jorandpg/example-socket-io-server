@@ -19,8 +19,9 @@
             console.log('Perdimos comunicación con el server');
         });
 
-        socket.emit('mensaje', {
-            nombre: 'Jorge'
+        socket.on('active-bands', (payload) => {
+            console.clear();
+            console.table(payload);
         });
     </script>
     
